@@ -19,9 +19,15 @@ UINT Unknown;
 
 UINT16 Width;
 UINT16 Height;
-UINT Unknown;
+UINT16 Type;
 
 width = Width;
 height = Height;
 
-BYTE Data[width * height] <name="Image data">;
+if (Type == 8) {
+  BYTE Pal[768] <name="Palette">;
+  BYTE Data[width * height * 1] <name="Image data">;
+}
+else {
+  BYTE Data[width * height * 4] <name="Image data">;
+}
