@@ -1,0 +1,37 @@
+# Game: Venome Codename Outbtreak (script 0.1)
+# Description:
+# script to unpack grp archive
+# Link:
+	
+IDString "\x46\x50\x52\x47"     
+    
+get FSIZE asize
+get VERSION long
+get NUM long
+get SIZE long
+
+log MEMORY_FILE 16 SIZE
+
+Set CURRENT_POS long 0
+
+xmath KEY "(FSIZE + 0x535a) % 0xffff"
+
+do
+    GetVarChr B MEMORY_FILE CURRENT_POS byte
+    xmath KEY "(KEY * 0x343fd) + 0x269ec3"
+    xmath B "B ^ (((KEY >> 16) & 0x7fff) % 0xff)"
+    PutVarChr MEMORY_FILE CURRENT_POS B byte
+    Math CURRENT_POS += 1
+while CURRENT_POS < SIZE
+
+#log MEMORY_FILE 0 0
+
+for i = 0 < NUM
+    get LEN SHORT MEMORY_FILE
+    getdstring FNAME LEN MEMORY_FILE 
+    get OFFSET LONG MEMORY_FILE    
+    get FSIZE LONG MEMORY_FILE  
+    get A long MEMORY_FILE
+    
+    log FNAME OFFSET FSIZE 
+next i 

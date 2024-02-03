@@ -1,0 +1,27 @@
+//------------------------------------------------
+//--- 010 Editor v8.0.1 Binary Template
+//
+//      File: 
+//   Authors: 
+//   Version: 
+//   Purpose: 
+//  Category: 
+// File Mask: 
+//  ID Bytes: 
+//   History: 
+//------------------------------------------------
+
+local float width, height;
+
+UINT Unknown;
+UINT Unknown;
+UINT Unknown;
+
+UINT16 Width;
+UINT16 Height;
+UINT Unknown;
+
+width = Width;
+height = Height;
+
+BYTE Data[width * height] <name="Image data">;

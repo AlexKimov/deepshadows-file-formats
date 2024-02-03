@@ -1,0 +1,1 @@
+F:\git\qbms\quickbms.exe -K -d -e -Y -F "*.grp" unpack_grp.bms "F:\Games\Venom" unpacked
