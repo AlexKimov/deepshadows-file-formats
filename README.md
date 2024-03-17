@@ -8,7 +8,8 @@
 
 | № | Формат  | Инструмент |  Программа   |   Описание |
 | :--- | :--------- | :----------- | :---------- | :---------- | 
-| 1 | .grp | [unpack_grp.bms](https://github.com/AlexKimov/deepshadows-file-formats/blob/master/scripts/qbms/unpack_grp.bms)  | quickbms  | Распаковка архива игровых ресурсов |
+| 1 | .grp | [unpack_grp.bms](https://github.com/AlexKimov/deepshadows-file-formats/tree/master/scripts/qbms/unpack_grp.bms)  | quickbms | Распаковка архива игровых ресурсов |
+| 2 | .mt | [fmt_venom_mt.py](https://github.com/AlexKimov/deepshadows-file-formats/tree/master/plugins/noesis/fmt_venom_mt.py)  | noesis | Распаковка архива игровых ресурсов |
 
     Как использовать quickbms скрипты
     1. Нужен quickbms https://aluigi.altervista.org/quickbms.htm
